@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Life Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Top Bar: Theme Toggle -->
+    <div class="top-bar">
+      <button id="theme-toggle-btn" class="btn-theme">🌙 Dark Mode</button>
+    </div>
+
+    <!-- Greeting Section -->
+    <header class="card greeting-card">
+      <h1 id="clock">00:00:00</h1>
+      <p id="date-display">Senin, 1 Januari 2026</p>
+      <div class="greeting-wrapper">
+        <h2 id="greeting-text">Good Morning</h2>
+        <input type="text" id="name-input" placeholder="Masukkan nama..." />
+      </div>
+    </header>
+
+    <!-- Main Grid Content -->
+    <div class="main-content">
+      
+      <!-- Focus Timer -->
+      <section class="card focus-timer">
+        <h3>Focus Timer</h3>
+        <div id="timer-display" class="timer">25:00</div>
+        <div class="timer-controls">
+          <button id="start-btn">Start</button>
+          <button id="stop-btn">Stop</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List -->
+      <section class="card todo-section">
+        <div class="todo-header">
+          <h3>Tasks</h3>
+          <button id="sort-tasks-btn" class="btn-secondary">Sort A-Z</button>
+        </div>
+        <form id="todo-form" class="input-group">
+          <input type="text" id="todo-input" placeholder="Add a new task..." required>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="todo-list" class="item-list"></ul>
+      </section>
+
+      <!-- Quick Links -->
+      <section class="card quick-links">
+        <h3>Quick Links</h3>
+        <form id="link-form" class="input-group">
+          <input type="text" id="link-name" placeholder="Link name" required>
+          <input type="url" id="link-url" placeholder="https://..." required>
+          <button type="submit">Add Link</button>
+        </form>
+        <div id="links-container" class="links-grid"></div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
